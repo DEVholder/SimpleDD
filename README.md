@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Simple Daily Diary with NEXTJS and MongoDB
 
-## Getting Started
+이 Toy 프로젝트는 간단한 일일 한줄 일기를 작성할 수 있도록 한다.
 
-First, run the development server:
+해당 Toy 프로젝트는 다음 환경에서 개발된다
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+* NEXTJS -Version 13
+* Bootstrap 
+* MongoDB 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+app/
+DD 메인 페이지 
+소개글과 통계를 보여준다
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+app/sign in
+계정 로그인
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+app/list
+DD 리스트 조회
 
-## Learn More
+app/detail/[id]
+DD 상세 정보 확인 
+[id]값을 통해 DB 조회
 
-To learn more about Next.js, take a look at the following resources:
+api/post/new
+새로운 게시글을 DB에 저장하는 api
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+api/post/edit
+기존 게시글을 수정하는 api
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+api/post/delete
+게시글을 DB에서 삭제하는 api
 
-## Deploy on Vercel
+api/auth/signin
+사용자 계정 로그인을 처리하는 api
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
